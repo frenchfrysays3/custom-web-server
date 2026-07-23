@@ -108,6 +108,42 @@ app.post('/api/login', (req, res) => {
 
         res.status(200).redirect('/?login=1');
     } catch (e) {
-        res.redirect('/500?error_code=auth_broke');
+        res.redirect('/500?error_code=signin_broke');
+    }
+});
+
+app.post('/api/signup', (req, res) => {
+    try {
+        const { username, password } = req.body;
+
+        const users = getUsers();
+
+        const userExists = users.some(function(user) {
+            return user.username === username;
+        });
+
+        if (userExists) {
+            return res.redirect('/login?error=2');
+        }
+
+        const hashedPassword = bcrypt.hashSync(password, 10);
+
+        const newUser = {
+            username: username,
+            password: hashedPassword,
+            dateSignedUp: new Date().toISOString()
+        };
+        req.session.user = {
+            username: username,
+            loggedIn: true
+        };
+
+        users.push(newUser);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2), 'utf-8');
+
+        return res.redirect('/?login=1');
+    } catch (e) {
+        console.log(chalk.red(`❌ error logging ${username} in! ${e.message}`));
+        return res.redirect('/505?error=signin_broke');
     }
 });
