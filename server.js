@@ -1,16 +1,20 @@
+// import required libraries
 const express = require('express');
 const session = require('express-session');
 const path = require('node:path');
 const fs = require('node:fs');
 const bcrypt = require('bcrypt');
-const chalk = require('bcrypt');
+const chalk = require('chalk');
 const dotenv = require('dotenv');
 
+// import contents of .env to process.env
 dotenv.config();
 
+// express setup
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+// session setup
 app.use(
     session({
         secret: process.env.SESSION_SECRET,
@@ -22,3 +26,9 @@ app.use(
         }
     })
 );
+
+// required for parsing JSON payloads
+app.use(express.json());
+// required for parse URL-encoded bodies
+app.use(express.urlencoded({ extended: true }));
+
