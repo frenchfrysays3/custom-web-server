@@ -1,0 +1,20 @@
+{
+  "name": "custom-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "frenchfrysays3",
+    "email": "lucas.e.fry@outlook.com",
+    "url": "https://github.com/frenchfrysays3"
+  },
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frenchfrysays3/custom-web-server.git"
+  }
+}
