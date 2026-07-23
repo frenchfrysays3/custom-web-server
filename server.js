@@ -108,6 +108,6 @@ app.post('/api/login', (req, res) => {
 
         res.status(200).redirect('/?login=1');
     } catch (e) {
-        res.redirect('/errors/500?error_code=auth_broke');
+        res.redirect('/500?error_code=auth_broke');
     }
 });
