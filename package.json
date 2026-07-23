@@ -1,39 +1,39 @@
 {
-  "name": "custom-web-server",
-  "version": "1.0.0",
-  "description": "",
-  "license": "MIT",
-  "author": {
-    "name": "frenchfrysays3",
-    "email": "lucas.e.fry@outlook.com",
-    "url": "https://github.com/frenchfrysays3"
-  },
-  "type": "commonjs",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/frenchfrysays3/custom-web-server.git"
-  },
-  "dependencies": {
-    "bcrypt": "^6.0.0",
-    "chalk": "^5.6.2",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "express-session": "^1.19.0"
-  },
-  "allowScripts": {
-    "bcrypt@6.0.0": true
-  },
-  "devDependencies": {
-    "eslint": "^10.7.0",
-    "eslint-config-prettier": "^10.1.8",
-    "husky": "^9.1.7",
-    "nodemon": "^3.1.14",
-    "prettier": "^3.9.6",
-    "supertest": "^7.2.2",
-    "vitest": "^4.1.10"
-  }
+    "name": "custom-web-server",
+    "version": "1.0.0",
+    "description": "",
+    "license": "MIT",
+    "author": {
+        "name": "frenchfrysays3",
+        "email": "lucas.e.fry@outlook.com",
+        "url": "https://github.com/frenchfrysays3"
+    },
+    "type": "commonjs",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/frenchfrysays3/custom-web-server.git"
+    },
+    "dependencies": {
+        "bcrypt": "^6.0.0",
+        "chalk": "^5.6.2",
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "express-session": "^1.19.0"
+    },
+    "allowScripts": {
+        "bcrypt@6.0.0": true
+    },
+    "devDependencies": {
+        "eslint": "^10.7.0",
+        "eslint-config-prettier": "^10.1.8",
+        "husky": "^9.1.7",
+        "nodemon": "^3.1.14",
+        "prettier": "^3.9.6",
+        "supertest": "^7.2.2",
+        "vitest": "^4.1.10"
+    }
 }
